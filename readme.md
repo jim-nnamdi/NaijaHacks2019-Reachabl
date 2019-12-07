@@ -1,9 +1,9 @@
 # NaijaHacks Hackathon 2019
 ## Team Reachabl
 ## Team Members
-* Samuel Jim Nnamdi
-* Orji Sandra Onyinyechi
-* Precious uzoma Ndubueze
+* Samuel Jim Nnamdi, jimsamuel50@gmail.com
+* Orji Sandra Onyinyechi, orji.sandra@gmail.com
+* Precious uzoma Ndubueze, Gabbyprecious2000@gmail.com
 ## Problem
 Students lag behind in education because of the quality of teaching by lecturers or teachers, definitely you cannot give what you don't have,meaning that lecturers cannot teach what they do not know or are not familiar about, and this leads to students not getting resourceful information and education which reduces educative and business skills, whilst not making them Job ready or even productive.
 
