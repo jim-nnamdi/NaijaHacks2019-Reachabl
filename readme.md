@@ -14,7 +14,7 @@ A Platform that uses machine learning Algorithms and Models to update connect le
 Python (Flask), Numpy, pandas, scikit-learn, matplotlib, Rest, MySQL DB
 
 ## Benefit
-* To provide a local connect among the above entities so as to improve education in Nigeria by delivering recent quality contents using AI.
-* A good resource for students to find where to learn and who to learn from and also for the general public to be able to advance in knowledge.
+* To provide a local connect among the above entities so as to improve education in Nigeria by delivering recent quality contents using Artificial intelligence and Machine learning.
+* A good resource for students to find where to learn and who to learn from and also for the general public to be able to advance in knowledge and furthermore gain employable skills generally.
 * Provide revenue for the Machine learning Engineers who'll maintain the Platform.
 * Reduce rate of unemployment in Nigeria by gaining business and employable skills.
