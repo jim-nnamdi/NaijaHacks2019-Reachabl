@@ -1,0 +1,25 @@
+.metro {
+  position: relative;
+   
+    background: -webkit-linear-gradient(to right, #F4D03F, #16A085);
+    background: linear-gradient(to right, rgb(245, 230, 170), rgb(204, 230, 225));
+  border-bottom-left-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+}
+
+h1 {
+  margin: 0;
+  padding: 100px 0;
+  font: 44px "Arial";
+  text-align: center;
+}
+
+.metro h1 {
+  color: white;
+}
+.hre{
+      background: linear-gradient(to right, rgb(207, 45, 228), rgb(115, 45, 228), rgb(45, 158, 228));
+}
+.btn-primaryi{background: lime;}

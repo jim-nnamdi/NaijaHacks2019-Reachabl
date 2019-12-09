@@ -1,0 +1,50 @@
+<!--
+	Extends the master template
+	which helps in re-constructing
+	the designs
+-->
+
+{%extends "master.html" %}
+{%block content%}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-7">
+			<div class="t-wrapper">
+				<br><br><br><br>
+				<div class="content page">
+					<h2 class="wfont">
+						<span>&rsaquo; Buy Stocks</span>
+					</h2>
+					<p align="justify" class="wfonty">goStocks actually supports at most six companies stocks and shares services which you can lookup their current prices and market cap and also purchase and sell your stocks which have been bought already by you</p>
+					<div class="form-group wfonty">
+						<form method="post" action="{{url_for('completedstock')}}">
+							<div class="form-group col-md-6">
+								<select name="symbol" class="form-control col-md-12">
+								<option>Select the company</option>
+								{%for company in quote %}
+								<option>{{quote[company]['quote'].symbol}}</option>
+								{%endfor%}
+								</select>
+							</div>
+							<br>
+							<div class="form-group col-md-6">
+								<select name="amount" class="form-control col-md-12">
+								<option>Select the Price</option>
+								{%for company in quote %}
+								<option>{{quote[company]['quote'].symbol}} {{quote[company]['quote'].latestPrice}}</option>
+								{%endfor%}
+								</select>
+							</div>
+							<br>
+							<div class="form-group col-md-6">
+								<input type="submit" name="register-brand" class="btn btn-sm btn-primary" value="BuyStocks">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{%endblock%}

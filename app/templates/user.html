@@ -1,0 +1,79 @@
+<!--
+	Extends the master template
+	which helps in re-constructing
+	the designs
+-->
+
+{%extends "master.html" %}
+{%block content%}
+  <div class="container">
+  	<div class="row">
+  		<div class="col-md-12">
+  			<div class="t-wrapper">
+  				<div class="content page">
+  					<br><br><br><br>
+  					<h2 class="wfont">&rsaquo; Users</h2>
+
+  					<!-- 
+  						Get flashed messages set already
+  						from the controller
+  					-->
+
+					{%with messages = get_flashed_messages()%}
+
+					{%if messages %}
+
+					{%for message in messages%}
+
+					{{message}}
+
+					{%endfor%}
+
+					{%endif%}
+
+					{%endwith%}
+
+					<!--
+						Start the Table for the data
+						entries to show
+					-->
+
+				<table border="1px" cellspacing="5px" cellpadding="10px" class="wfonty">
+					<tr>
+						<th>username</th>
+						<th>email</th>
+						<th>password</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					</tr>
+					{%for row in data%}
+					<tr>
+						<td width="50px">
+						{{row.1}}	
+						</td>
+						<td width="50px">
+						{{row.2}}	
+						</td>
+						<td width="50px">
+						{{row.3}}	
+						</td>
+						<td>
+							<a href="/edituser/{{row.0}}" class="btn primary"> Edit </a>
+						</td>
+						<td>
+							<a href="/delete/{{row.0}}" class="btn primary"> Delete </a>
+						</td>
+					</tr>
+				{%endfor%}
+			</table>
+
+			<!--
+				End the table and then close all 
+				other designs
+			-->
+		</div>
+	</div>
+</div>
+</div>
+</div>
+{%endblock%}

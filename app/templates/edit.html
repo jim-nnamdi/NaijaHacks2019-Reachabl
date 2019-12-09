@@ -1,0 +1,61 @@
+<!--
+	Extends the master template
+	which helps in re-constructing
+	the designs
+-->
+
+{%extends "master.html" %}
+{%block content%}
+
+<div class="wrap-main" role="document">
+	<main>
+		<section class="page-hero">
+
+			<!--
+				The Image at the Left-col of
+				the container-wrap
+			-->
+			<div class="hero-image">
+				<div class="image-wrapper">
+					<img src="{{url_for('static', filename='img/Lander_Hero_1-1.png')}}" alt="">
+				</div>
+			</div>
+
+			<!--
+				Start the container for 
+				the Main form 
+			-->
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="t-wrapper">
+							<div class="content page">
+								<h2 class="wfont"><span>&rsaquo; Edit</span></h2>
+								<div class="form-group wfonty">
+									<form method="post" action="{{url_for('update')}}">
+										<input type="hidden" name="id" value="{{data.0}}">
+										<div class="form-group col-md-6">
+											<input type="text" name="username" value="{{data.1}}" class="form-control col-md-12" placeholder="username">
+										</div>
+										<br>
+										<div class="form-group col-md-6">
+											<input type="email" name="email" value="{{data.2}}" class="form-control col-md-12" placeholder="Email Address">
+										</div>
+										<br>
+										<div class="form-group col-md-6">
+											<input type="text" name="password" value="{{data.3}}" class="form-control col-md-12" placeholder="Password">
+										</div>
+										<br>
+										<div class="form-group col-md-6">
+											<input type="submit" name="register-brand" class="btn btn-sm btn-primary" value="update">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		{%endblock%}

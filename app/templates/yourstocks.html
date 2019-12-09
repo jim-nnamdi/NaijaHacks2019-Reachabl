@@ -1,0 +1,71 @@
+<!--
+	Extends the master template
+	which helps in re-constructing
+	the designs
+-->
+
+{%extends "master.html" %}
+{%block content%}
+  <div class="container">
+  	<div class="row">
+  		<div class="col-md-12">
+  			<div class="t-wrapper">
+  				<div class="content page">
+  					<br><br><br><br>
+  					<h2 class="wfont">&rsaquo; current stocks you purchased.</h2>
+
+  					<!-- 
+  						Get flashed messages set already
+  						from the controller
+  					-->
+
+					{%with messages = get_flashed_messages()%}
+
+					{%if messages %}
+
+					{%for message in messages%}
+
+					{{message}}
+
+					{%endfor%}
+
+					{%endif%}
+
+					{%endwith%}
+
+					<!--
+						Start the Table for the data
+						entries to show
+					-->
+
+				<table border="1px" cellspacing="5px" cellpadding="10px" class="wfonty">
+					<tr>
+						<th>Company</th>
+						<th>Symbol/Price</th>
+						<th>Client</th>
+					</tr>
+					{%for row in data%}
+					<tr>
+						<td width="100px">
+						{{row.1}}	
+						</td>
+						<td width="300px">
+						{{row.2}}	
+						</td>
+						<td width="100px">
+						{{row.3}}	
+						</td>
+					</tr>
+				{%endfor%}
+			</table>
+
+			<!--
+				End the table and then close all 
+				other designs
+			-->
+		</div>
+	</div>
+</div>
+</div>
+</div>
+{%endblock%}

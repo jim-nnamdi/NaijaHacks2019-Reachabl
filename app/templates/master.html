@@ -1,0 +1,139 @@
+    <html lang="en-US">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<title> GoStock - Stocks | Finance Charts</title>
+
+	<!--
+		Meta tags for the Site header
+		Includes different canonical information
+	-->
+
+	<meta name="description" content="GoStock Stocks | Finance Charts."/>
+	<link rel="canonical" href="https://GoStock.com/"/>
+	<link rel='stylesheet' id='wp-block-library-css'  href="{{url_for('static', filename='css/style.min.css')}}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='wp-block-library-css'  href="{{url_for('static', filename='css/metro.css')}}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='sage/css-css'  href="{{url_for('static', filename='css/main-f401e7236d.css')}}" type='text/css' media='all'/>
+	<link rel="icon" href="{{url_for('static', filename='img/reachabl.png')}}">
+	<script type='text/javascript' src="{{url_for('static', filename='js/jquery.js')}}"></script>
+	<head>
+
+		<!-- 
+			These styles here are rather fixed here to avoid conflict
+			with the BootStrap custom styling and also generic style fixes
+		-->
+
+		<style type="text/css">@font-face {font-family: all;src: url('{{url_for('static', filename='font/wals.woff')}}');}.wfonty{font-family: all;}@font-face {font-family: alli;src: url('https://1lg4fkawsq836edzk2bsqpov-wpengine.netdna-ssl.com/wp-content/themes/kokku-theme/dist/fonts/GT-Walsheim-Bold.woff2');}.wfont{font-family: alli;}.wfont{font-family:url('https://1lg4fkawsq836edzk2bsqpov-wpengine.netdna-ssl.com/wp-content/themes/kokku-theme/dist/fonts/GT-Walsheim-Bold.woff2');} .boy{font-family: wfont}.t-wrapper{margin-bottom: 20px!important;margin-left: 10px;margin-right: 10px;padding-top: 25px;padding-bottom: 25px;}.t-wrapper1{margin-bottom: 1px!important;margin-left: 10px;margin-right: 10px;padding-top: 25px;padding-bottom: 25px;}.t-wrapper2{margin-bottom: 0px!important;margin-left: 10px;margin-right: 10px;padding-top: 25px;padding-bottom: 25px;} * a{color:rgb(80,174,131);}
+	</style>
+
+	<!-- 
+		End of the custom styling and beginning of the
+		core Body-header section for optimal viewing
+	--> 
+
+	<body class="home page-template page-template-template-page-builder page-template-template-page-builder-php page page-id-14 cookies-not-set">
+	<header class="banner">
+	<div class="container-fluid">
+	<div class="row justify-content-between align-items-center">
+	<a class="brand font-weight-bold wfont" style=" color: rgb(45, 55, 103);" href="/"><img src="{{url_for('static', filename='img/reachabl.png')}}" style="width: 40px; height: 40px;"><b style="color:rgb(45, 55, 103)"> goStock</b></a>
+	<nav class="nav-primary align-self-center">
+	<div class="menu-menu-1-container"><ul id="menu-menu-1" class="nav"><li id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-228 wfonty"><a href="brands.php">Podcasts</a></li>
+	<li id="menu-item-449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-449 wfonty"><a href="developers.php">Charts</a></li>
+	<li id="menu-item-159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-159 wfonty"><a href="casestudies.php">Stock Sellings</a></li>
+	<li id="menu-item-266" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-266 wfonty"><a href="team.php">Developers APIs</a></li>
+	<li id="menu-item-266" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-266 wfonty"><a href="team.php">Our News</a></li>
+	</ul>
+	</div>   
+
+	<!--
+		For Mobile responsiveness via the
+		Mobile Menu- fix Mobile CTAS
+	-->
+
+	{%if session['loggedin'] %}
+	<div class="mobile-nav-ctas">
+		<div class="wfont">
+			<small>
+				<font color="red"><a href="{{url_for('profile')}}">{{username}} Dashboard</a></font>
+				<img src="{{url_for('static', filename='img/avatar5.jpg')}}" width="40px" height="40px" style="border-radius:100%; margin-left: 8px">
+			</small>
+		</div>
+	</div>
+	</nav>
+	<div class="nav-ctas">
+		<div class="wfont">
+			<small>
+				<font color="red"><a href="{{url_for('profile')}}">{{username}} Dashboard</a></font>			
+				<img src="{{url_for('static', filename='img/avatar5.jpg')}}" width="40px" height="40px" style="border-radius:100%; margin-left: 8px">
+			</small>
+		</div>
+	</div>
+	<div class="nav-burger">
+	<span class="line first"></span>
+	<span class="line second"></span>
+	<span class="line third"></span>
+	</div>
+	{%else%}
+	<div class="mobile-nav-ctas">
+	<a href="{{url_for('register')}}" class="btn primary wfonty">Register</a>
+	<a href="{{url_for('login')}}" class="login wfonty" target="_blank" rel="noopener">Login</a>          
+	</div>
+	</nav>
+	<div class="nav-ctas">
+	<a href="{{url_for('login')}}" class="login wfonty" target="_blank" rel="noopener">Login</a>
+	<a href="{{url_for('register')}}" class="btn primary wfonty">Register</a>
+	</div>
+	<div class="nav-burger">
+	<span class="line first"></span>
+	<span class="line second"></span>
+	<span class="line third"></span>
+	</div>
+	{%endif%}
+	</div>
+	</div>
+	</header>
+
+	<!-- 
+		End the NavBar for the Header which spans
+		through the application generally!
+	-->
+
+	{%block content%}
+	{%endblock%}
+
+
+	<!--
+		Footer Class starts here, which includes
+		the styles and styling powering the footer
+	-->
+
+	<footer class="main-footer" style="">
+	<div class="bg-color" style="background-color:#ADEFD1FF !important; color: #00203fff !important">
+
+	<div class="container">
+	<div class="row align-items-center">
+	<div class="col-md-12">
+	<div class="social">
+	<a href="https://www.facebook.com/gostack/" target="_blank" rel="noopener"><img src="https://1lg4fkawsq836edzk2bsqpov-wpengine.netdna-ssl.com/wp-content/uploads/2018/11/facebook-logo.svg" alt="GoStock Facebook" /></a>
+	<a href="https://twitter.com/gostack" target="_blank" rel="noopener"><img src="https://1lg4fkawsq836edzk2bsqpov-wpengine.netdna-ssl.com/wp-content/uploads/2018/11/twitter.svg" alt="GoStock Twitter" /></a>
+	<a href="https://www.linkedin.com/company/gostack/" target="_blank" rel="noopener"><img src="https://1lg4fkawsq836edzk2bsqpov-wpengine.netdna-ssl.com/wp-content/uploads/2018/11/linkedin.svg" alt="GoStock Linkedin" /></a>
+	<a href="https://www.instagram.com/gostack/" target="_blank" rel="noopener"><img src="https://1lg4fkawsq836edzk2bsqpov-wpengine.netdna-ssl.com/wp-content/uploads/2019/01/ig_logo.svg" alt=""/></a>
+	</div>
+	</div>
+	<div class="col-md-3">
+	</div>
+	</div>
+	</div>
+	</div>
+	</footer>
+	<script type='text/javascript' src='https://1lg4fkawsq836edzk2bsqpov-wpengine.netdna-ssl.com/wp-content/themes/kokku-theme/dist/scripts/main-4dc62f28aa.js'></script>
+	</div>
+	<script data-no-minify="1" async src="{{url_for('static', filename='js/lazyload.min.js')}}"></script>      </body>
+	</html>
+
+	<!--
+		End of File and footer entirely
+		this holds all recurring Vars
+	-->

@@ -1,0 +1,90 @@
+<!-- 
+	Import the Master templating file
+	using Jinja extends method
+-->
+
+{%extends "master.html" %}
+{%block content%}
+
+<!--
+	Begin the Main Content
+-->
+
+<div class="wrap-main" role="document">
+    <main>
+
+    	<!-- 
+    		Added line Breaks for header clear-breaks 
+    	-->
+
+    	<br><br><br><br>    
+    	<div class="container">
+    		<div class="row">
+            
+            <!-- 
+            	Start first item
+            -->
+
+            <div class="col-md-3" style="margin-bottom: 9px !important;">
+            <a href="#">
+            <div class="recent-post">
+            <div class="t-wrapper" style="border: 2px solid rgb(61, 193, 227);border-radius: 5px; box-shadow: -9px 5px 0px 0px lavender;">            
+            <h3 class="wfont" style="margin-left: 10px; padding: 15px"><a href="{{url_for('buystock')}}">Buy Stocks</a>
+            </h3>
+            <p align="justify" style="margin-left: 10px; padding: 15px"><span class="wfonty"><font color="gray">go Stock provides a niche and a medium for you our valued clients to buy stocks and shares.</font></p>
+            </div>
+            </div>
+            </a>
+            </div>
+
+            <!-- 
+            	end of first of stock Groupings
+            -->
+
+            <div class="col-md-3" style="margin-bottom: 9px;">
+            <a href="#">
+            <div class="recent-post">            
+           <div class="t-wrapper" style="border: 2px solid rgb(61, 193, 227);border-radius: 5px; box-shadow: -9px 5px 0px 0px lavender;">            
+            <h3 class="wfont" style="margin-left: 10px; padding: 15px"><a href="product.php">Sell Stocks</a> </h3>
+            <p align="justify" style="margin-left: 10px; padding: 15px"><span class="wfonty"><font color="gray">go Stock provides a niche and a medium for you our valued clients to sell stocks and shares.</font></p>
+            </div>
+            </div>
+            </a>
+            </div>
+
+            <!-- 
+            	end of second of stock Groupings
+             -->
+
+            <div class="col-md-3" style="margin-bottom: 9px">
+            <a href="#">
+            <div class="recent-post">            
+            <div class="t-wrapper" style="border: 2px solid rgb(61, 193, 227);border-radius: 5px;  box-shadow: -9px 5px 0px 0px lavender;">            
+            <h3 class="wfont" style="margin-left: 10px; padding: 15px"><a href="{{url_for('iex')}}">Lookup Prices</a></h3>
+            <p align="justify" style="margin-left: 10px; padding: 15px"><span class="wfonty"><font color="gray">go Stock provides a niche and a medium for you our valued clients to compare stocks and shares.</font></p>
+            </div>
+            </div>
+            </a>
+            </div>
+
+            <!-- 
+            	end of third of stock Groupings
+            -->
+
+            <div class="col-md-3" style="margin-bottom: 9px">
+            <a href="#">
+            <div class="recent-post">            
+            <div class="t-wrapper" style="border: 2px solid rgb(61, 193, 227);border-radius: 5px;  box-shadow: -9px 5px 0px 0px lavender;">            
+            <h3 class="wfont" style="margin-left: 10px; padding: 15px"><a href="product.php">Chart Files</a></h3>
+            <p align="justify" style="margin-left: 10px; padding: 15px"><span class="wfonty"><font color="gray">go Stock provides a niche and a medium for you our valued clients to see stocks and shares.</font></p>
+            </div>
+            </div>
+            </a>
+            </div>
+
+            <!-- 
+            	end of fourth of stock Groupings
+             -->
+            </div>
+          	</div>
+        {%endblock%}
