@@ -1,0 +1,78 @@
+<!--
+    Extends the master template
+    which helps in re-constructing
+    the designs
+-->
+
+{%extends "master.html" %}
+{%block content%}
+
+<div class="wrap-main" role="document">
+    <main>    
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <!-- Start first item -->
+                <div class="col-md-6" style="margin-bottom: 9px !important;">
+                    <a href="#">
+                        <div class="recent-post">
+                            <div class="t-wrapper" style="border: 2px solid rgb(61, 193, 227);border-radius: 5px; box-shadow: -9px 5px 0px 0px lavender;">
+                                <h3 class="wfont" style="margin-left: 10px; padding: 15px">
+                                    <a href="product.php">{{account.1}}</a>
+                                    <br>
+                                    <small>
+                                    {{account.2}}
+                                    <br>
+                                    Balance: {{account.7}} Naira
+                                </small>
+                                </h3>
+                                <p align="justify" style="margin-left: 10px; padding: 15px">
+                                    <span class="wfonty">
+                                        <font color="gray">You can lookup prices of Stocks here and can also buy stocks which are on display and can also transact with real time prices gotten from IEX endpoints real time.
+                                        </font>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6" style="margin-bottom: 9px !important;">
+                    <div class="recent-post">
+                        <div class="t-wrapper">
+                            <img src="{{url_for('static', filename='img/map.jpg')}}" class="das" width="100%" style="margin-bottom: 8px; border-radius: 5px;" />
+                            <a class="btn primary btn large wfont" href="{{url_for('fundaccount')}}">
+                                <font color="darkgreen"> 
+                                    Fund account 
+                                </font>
+                            </a>
+                            <a class="btn primary btn large wfont" href="{{url_for('buystock')}}" style="margin-top:3px">
+                                <font color="darkgreen"> 
+                                    Buy Stocks here
+                                </font>
+                            </a>
+                            <form name="topaypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" class="wfont">
+                                <input type="hidden" name="cmd" value="_xclick-subscriptions">
+                                <input type="hidden" name="custom" value="{{session['username']}}"/>
+                                <input type="hidden" name="business" value="jimsamuel50@gmail.com">
+                                <input type="hidden" name="item_name" value="subscription button">
+                                <input type="hidden" name="item_number" value="500">
+                                <input type="hidden" name="no_shipping" value="1">
+                                <input type="hidden" name="a3" value="1000.00">
+                                <input type="hidden" name="p3" value="1">
+                                <input type="hidden" name="t3" value="M">
+                                <input type="hidden" name="src" value="1">
+                                <input type="hidden" name="sra" value="1">
+                                <input type="hidden" name="return" value="http://104.236.221.91/success/">
+                                <input type="hidden" name="cancel_return" value="http://104.236.221.91/">
+                                <input type="hidden" name="notify_url" value="http://104.236.221.91/ipn/">
+                                <input type="submit" value="Fund Using PayPal" name="submit" title="PayPal - The safer, easier way to pay online!" class="btn large btn primary" style="margin-top: 3px; color:darkgreen">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+{%endblock%}

@@ -1,0 +1,116 @@
+<!-- 
+	The complete layout for the general
+	design linking styles
+-->
+{%extends "master.html" %}
+{%block content%}
+
+<!-- 
+	Start the content to render the
+	data gotten via Api
+-->
+
+<div class = "container col-md-12">
+	<div class="row">
+		<div class="t-wrapper">
+			<div class="content page">
+				<br><br><br><br>
+				<table border="1px" cellspacing="5px" cellpadding="10px" class="wfonty table-responsive">
+					<tr>
+						<th>
+							companyName
+						</th>
+						<th>
+							latestPrice
+						</th>
+						<th>
+							latestTime
+						</th>
+						<th>
+							marketCap
+						</th>
+						<th>
+							high
+						</th>
+						<th>
+							low
+						</th>
+						<th>
+							perRatio
+						</th>
+						<th>
+							open
+						</th>
+						<th>
+							close
+						</th>
+						<th>
+							week52High
+						</th>
+						<th>
+							week52Low
+						</th>
+						<th>
+							Purchase
+						</th>
+					</tr>
+
+					<!--
+						Start the Loop to populate the table
+						Data and display details accordingly
+					-->
+
+					{%for company in quote %}
+
+					<tr>
+						<td>
+							{{quote[company]['quote'].companyName}}
+						</td>
+						<td>
+							{{quote[company]['quote'].latestPrice}}
+						</td>
+						<td>
+							{{quote[company]['quote'].latestTime}}
+						</td>
+						<td>
+							{{quote[company]['quote'].marketCap}}
+						</td>
+						<td>
+							{{quote[company]['quote'].high}}
+						</td>
+						<td>
+							{{quote[company]['quote'].low}}
+						</td>
+						<td>
+							{{quote[company]['quote'].peRatio}}
+						</td>
+						<td>
+							{{quote[company]['quote'].open}}
+						</td>
+						<td>
+							{{quote[company]['quote'].close}}
+						</td>
+						<td>
+							{{quote[company]['quote'].week52High}}
+						</td>
+						<td>
+							{{quote[company]['quote'].week52Low}}
+						</td>
+						<td>
+							<a href="/buystock?data:{coy:{{quote[company]['quote'].symbol}}; price:{{quote[company]['quote'].latestPrice}}}" class="btn primary btn small" style="color:darkgreen"> Buy Stock </a>
+						</td>
+					</tr>
+
+					{%endfor%}
+
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+{%endblock%}
+<!-- {%for q in quote%}
+{{quote[q]['quote'].companyName}}
+{%endfor%} -->
+
+<!-- {{quote['AAPL']}} -->

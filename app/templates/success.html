@@ -1,0 +1,50 @@
+<!--
+    Extends the master template
+    which helps in re-constructing
+    the designs
+-->
+
+{%extends "master.html" %}
+{%block content%}
+
+<div class="wrap-main" role="document">
+    <main>    
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <!-- Start first item -->
+                <div class="col-md-6" style="margin-bottom: 9px !important;">
+                    <a href="#">
+                        <div class="recent-post">
+                            <div class="t-wrapper" style="border: 2px solid rgb(61, 193, 227);border-radius: 5px; box-shadow: -9px 5px 0px 0px lavender;">
+                                <h3 class="wfont" style="margin-left: 10px; padding: 15px">
+                                    <a href="#">goStocks Account</a> . <a href="/profile"> Profile</a>
+                                    <br>
+                                    <small>
+                                    Thanks! you have funded your account
+                                </small>
+                                </h3>
+                                <p align="justify" style="margin-left: 10px; padding: 15px">
+                                    <span class="wfonty">
+                                        <font color="gray">Since you funded your account, You can lookup prices of Stocks here and can also buy stocks which are on display and can also transact with real time prices gotten from IEX endpoints real time.
+                                        </font>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--
+                    Start the second column where
+                    the SVG would be housed
+                -->
+
+                <div class="col-md-6">
+                    <img src="{{url_for('static', filename='img/success.svg')}}">
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+{%endblock%}
